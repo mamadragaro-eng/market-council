@@ -103,3 +103,12 @@ img, svg { max-width: 100%; height: auto; }
 .fold summary { padding: 4px 0; }
 .fold ul { padding-left: 18px; }
 .fold code { font-size: 12px; }
+/* Favourites and filter (site.js) */
+.star { background: none; border: 0; padding: 0 6px 0 0; margin: 0; font-size: 17px; line-height: 1; cursor: pointer; color: var(--muted); vertical-align: -1px; }
+.star[aria-pressed="true"] { color: #d4a017; }
+.star:focus-visible { outline: 2px solid var(--accent); border-radius: 3px; }
+tr.fav > td { background: var(--why); }
+.filter { width: 100%; max-width: 320px; font: inherit; font-size: 15px; padding: 7px 10px; margin: 4px 0 6px;
+  border: 1px solid var(--line); border-radius: 8px; background: var(--bg); color: var(--text); }
+.fav-hint { color: var(--muted); font-size: 13px; }
+@media (max-width: 600px) { .star { font-size: 20px; padding: 4px 8px 4px 0; } .filter { max-width: none; font-size: 16px; } }

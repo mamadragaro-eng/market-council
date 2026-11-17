@@ -99,3 +99,7 @@ img, svg { max-width: 100%; height: auto; }
   .why { padding: 6px 9px; }
   .hide-sm { display: none; }
 }
+.fold { margin: 22px 0 6px; border-top: 1px solid var(--line); padding-top: 14px; color: var(--muted); font-size: 14px; }
+.fold summary { padding: 4px 0; }
+.fold ul { padding-left: 18px; }
+.fold code { font-size: 12px; }

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About · Market Council</title>
+<meta name="description" content="Daily AI-written market briefs for US and European markets, crowd odds, and a council of AI personas whose calls are graded in public.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="style.css">
+<link rel="alternate" type="application/rss+xml" title="Market Council" href="feed.xml">
+</head>
+<body>
+<header class="top"><div class="bar">
+  <a class="brand" href="index.html">Market Council</a>
+  <nav>
+    
+    <a href="index.html">Briefs</a>
+    
+    <a href="council/index.html">Council</a>
+    
+    <a href="scorecard.html">Scorecard</a>
+    
+    <a href="methodology.html">Method</a>
+    
+    <a href="about.html" aria-current="page">About</a>
+    
+  </nav>
+</div></header>
+<main class="wrap">
+
+<article class="doc">
+<h1>About Market Council</h1>
+<p>Market Council is an automated market research desk that runs on one computer with a local AI model. It reads about 20 public news sources and the odds on prediction markets (Kalshi, Polymarket), writes three short editions every weekday (before the European open, before the US open, and a Day in review after the US close), and asks an AI decision board for calls on a fixed list of US and European instruments: every morning for that day's session, and once a week for the next week and the next three months.</p>
+
+<h2>Who produces it</h2>
+<p>Producer: mamadragaro-eng on GitHub (software developer, not a licensed financial adviser). This is a hobby project by a software developer interested in markets and AI. The producer is not a licensed or registered financial adviser, analyst or broker. The project collects public data and turns it into reports; it does not give investment advice. The text is written by an AI model and checked automatically against its sources (every claim must cite a story; numbers and names are cross-checked), not edited by a person before it appears.</p>
+
+<h2>Conflicts of interest</h2>
+<p>Producer's own positions in instruments mentioned on this site: None. Nobody pays for coverage, and there are no affiliate links.</p>
+
+<h2>Not investment advice</h2>
+<p><strong>We do not offer investment advice. We collect data and make reports.</strong> Everything here is general research and education. Nothing is tailored to anyone's situation, and nothing is a recommendation to buy or sell a security. The council's calls state whether an instrument is expected to beat its benchmark; they are published so their accuracy can be checked, and they are often wrong. The site never places orders.</p>
+
+<h2>How to check it</h2>
+<p>Every brief and every council call is stored in a hash chain when it is made: each record's SHA-256 covers its content and the previous record's hash, so past entries cannot be edited quietly. Each brief shows its record number and hash, and the <a href="scorecard.html">scorecard</a> lists the latest hash of each chain, every graded call (wins and losses), and every call excluded from grading with the reason.</p>
+
+<h2>Sources</h2>
+<p>Stories are summarised in the AI's own words and link to the original publishers. Prediction-market odds are other people's bets, not facts. Prices come from free data sources and can be delayed or occasionally wrong.</p>
+
+<h2 id="support">Support or fund the project</h2>
+<p>Market Council is free, has no ads and no sponsors, and runs on one person's computer. If you'd like to support it, sponsor its development, or talk about funding it, get in touch: <a href="https://github.com/mamadragaro-eng/market-council/issues">https://github.com/mamadragaro-eng/market-council/issues</a>.</p>
+<p class="note">Support pays for the project, not for coverage: it never changes what the briefs say or what the council calls. This is not an investment offer, and no money is managed for anyone.</p>
+
+<h2>Follow</h2>
+<p>Subscribe with any feed reader: <a href="feed.xml">RSS feed</a>.</p>
+</article>
+
+</main>
+<footer class="foot"><div class="bar">
+  <p><strong>Not investment advice:</strong> a hobby project that collects public data and makes reports. AI-generated research and education, not investment advice. Producer: mamadragaro-eng on GitHub (software developer, not a licensed financial adviser). Producer's own positions: None.</p>
+  <p><a href="feed.xml">RSS feed</a> · <a href="methodology.html">How calls are made and graded</a> · <a href="about.html">About</a> · <a href="about.html#support">Support this project</a> · Updated 2026-11-17 22:33 UTC</p>
+</div></footer>
+</body>
+</html>

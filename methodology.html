@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How calls are made and graded · Market Council</title>
+<meta name="description" content="Daily AI-written market briefs for US and European markets, crowd odds, and a council of AI personas whose calls are graded in public.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="style.css">
+<link rel="alternate" type="application/rss+xml" title="Market Council" href="feed.xml">
+</head>
+<body>
+<header class="top"><div class="bar">
+  <a class="brand" href="index.html">Market Council</a>
+  <nav>
+    
+    <a href="index.html">Briefs</a>
+    
+    <a href="council/index.html">Council</a>
+    
+    <a href="scorecard.html">Scorecard</a>
+    
+    <a href="methodology.html" aria-current="page">Method</a>
+    
+    <a href="about.html">About</a>
+    
+  </nav>
+</div></header>
+<main class="wrap">
+
+<article class="doc"><h1>How it works</h1>
+<p>An overview of how calls are made, how they are graded, and what the scorecard can and cannot tell you. This is a hobby project that collects public data and makes reports. It is not investment advice.</p>
+<h2>What is predicted</h2>
+<p>For a fixed list of US and European stocks, ETFs and currencies, over three horizons:</p>
+<ul>
+<li><strong>Today's session</strong>: from today's open to today's close.</li>
+<li><strong>Next week</strong>: 5 trading days.</li>
+<li><strong>Next 3 months</strong>: 63 trading days.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Call</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bullish</td>
+<td>expected to do better than its benchmark (for today's session: close above the open)</td>
+</tr>
+<tr>
+<td>Neutral</td>
+<td>expected to stay within a normal range</td>
+</tr>
+<tr>
+<td>Bearish</td>
+<td>expected to do worse than its benchmark (for today's session: close below the open)</td>
+</tr>
+</tbody>
+</table>
+<p>Benchmarks: the S&amp;P 500 (SPY) for US names and the STOXX Europe 600 for European names. Currencies and indices are graded on their own price move.</p>
+<h2>How a call is made</h2>
+<p><strong>Public data.</strong> For each instrument, the desk gathers prices, recent news from about 20 sources, prediction-market odds, company data and a macro picture.</p>
+<p><strong>A decision board.</strong> Several AI members look at that data, each from a different angle, and each votes Bullish, Neutral or Bearish with its reasons. Members can see a summary of the others' views and change their minds before the final vote.</p>
+<p><strong>The call is computed.</strong> No single model chooses the board's call. It is worked out from the members' weighted votes. The council pages show the vote count and how clearly the call won.</p>
+<p><strong>The board learns.</strong> As calls are graded, members that read the market well count for more and members that read it badly count for less.</p>
+<h2>Integrity</h2>
+<ul>
+<li><strong>Recorded before the outcome.</strong> Every call is stored with a timestamp in a hash chain when it is made. Each record's SHA-256 fingerprint covers its content and the previous record's fingerprint, so past calls cannot be edited quietly.</li>
+<li><strong>Nothing is deleted.</strong> A call that must not count, such as a test run, is excluded with a published reason.</li>
+<li><strong>Losses are shown.</strong> The <a href="scorecard.html">scorecard</a> lists every graded call, right or wrong.</li>
+</ul>
+<h2>How a call is graded</h2>
+<ul>
+<li><strong>Entry and exit.</strong> The entry is the last known price when the call was made. The exit is the close at the end of the horizon.</li>
+<li><strong>Excess move.</strong> The instrument's return minus its benchmark's return over the same days.</li>
+<li><strong>Normal range.</strong> ±0.5 × the instrument's usual volatility over that horizon. A move inside it counts as flat.</li>
+<li><strong>Right or wrong.</strong> Bullish is right if the instrument beat the range, Bearish if it fell below it, Neutral if it stayed inside.</li>
+<li><strong>Baseline.</strong> The scorecard compares the board with simply calling everything Bullish. A board that can't beat that adds nothing.</li>
+</ul>
+<h2>Session calls</h2>
+<ul>
+<li><strong>When.</strong> Before each market opens: the European names before 09:00 Frankfurt time, the US names before 09:30 New York time. The calls appear in that morning's brief.</li>
+<li><strong>What.</strong> Whether each instrument closes above or below today's opening price. A move under half a typical day counts as flat, which is what a Neutral call predicts.</li>
+<li><strong>Why the open.</strong> The call is recorded before the open, so the opening price is the first price nobody could have known. A call recorded after the open is kept but never graded.</li>
+<li><strong>Scored.</strong> After the US close, the Day in review edition shows each morning call against the close, the day's tally next to always-Bullish, and the last 30 days' record.</li>
+</ul>
+<h2>What the scorecard can't tell you</h2>
+<p>One day, or a handful of calls, is noise. Look at the 30-day record and its range, not a single session. Past accuracy says nothing certain about future calls. Prices come from free data sources and can be delayed or occasionally wrong.</p>
+</article>
+
+</main>
+<footer class="foot"><div class="bar">
+  <p><strong>Not investment advice:</strong> a hobby project that collects public data and makes reports. AI-generated research and education, not investment advice. Producer: mamadragaro-eng on GitHub (software developer, not a licensed financial adviser). Producer's own positions: None.</p>
+  <p><a href="feed.xml">RSS feed</a> · <a href="methodology.html">How calls are made and graded</a> · <a href="about.html">About</a> · <a href="about.html#support">Support this project</a> · Updated 2026-11-17 22:33 UTC</p>
+</div></footer>
+</body>
+</html>

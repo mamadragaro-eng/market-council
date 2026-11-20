@@ -74,6 +74,7 @@ tr.has-why td { border-bottom: 0; padding-bottom: 0; }
 .foot { color: var(--muted); font-size: 13px; padding: 4px 0 28px; }
 .foot p { margin: 6px 0; }
 .note { color: var(--muted); font-size: 14px; }
+.correction { border-left: 3px solid var(--down); background: var(--why); padding: 8px 12px; margin: 10px 0 14px; }
 .market { margin-bottom: 12px; }
 .src, .meta, .teaser { overflow-wrap: anywhere; }
 .scroll table { margin-bottom: 0; }
